@@ -22,7 +22,8 @@ class kandang:
 
     def tambah_hewan(self, hewan):
         self.hewan_list.append(hewan)
-
+class rawat_kandang:
+    
     def bersihkan_kandang(self):
         print("Kandang dibersihkan.")
 
