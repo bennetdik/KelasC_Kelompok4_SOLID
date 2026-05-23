@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+
 class Hewan(ABC):
     def __init__(self, nama):
         self.nama = nama
@@ -15,6 +16,7 @@ class HewanTerbang(ABC):
     @abstractmethod
     def terbang(self):
         pass
+
 class HewanBerenang(ABC):
     @abstractmethod
     def berenang(self):
@@ -24,8 +26,13 @@ class kandang:
     def __init__(self):
         self.hewan_list = []
 
-    def tambah_hewan(self, hewan):
+    def tambah_hewan(self, hewan: Hewan):
         self.hewan_list.append(hewan)
+
+    def tampilkan_hewan(self):
+        for hewan in self.hewan_list:
+            hewan.nama_hewan()
+
 class rawat_kandang:
     
     def bersihkan_kandang(self):
