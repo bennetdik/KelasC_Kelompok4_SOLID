@@ -15,6 +15,10 @@ class HewanTerbang(ABC):
     @abstractmethod
     def terbang(self):
         pass
+class HewanBerenang(ABC):
+    @abstractmethod
+    def berenang(self):
+        pass
 
 class kandang:
     def __init__(self):
