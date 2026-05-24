@@ -39,9 +39,25 @@ class rawat_kandang:
         print("Kandang dibersihkan.")
 
 class kebun_binatang:
-    def __init__(self):
-        self.kandang = kandang()
+    class KebunBinatang:
+    def __init__(self, kandang: kandang):
+        self.kandang = kandang
 
     def rawat_semua_hewan(self):
         for hewan in self.kandang.hewan_list:
-            hewan.makan()
+
+            print(f"Sedang merawat {hewan.nama}")
+
+            if hasattr(hewan, "makan"):
+                hewan.makan()
+                
+            if isinstance(hewan, HewanBerjalan):
+                hewan.berjalan()
+
+            if isinstance(hewan, HewanTerbang):
+                hewan.terbang()
+
+            if isinstance(hewan, HewanBerenang):
+                hewan.berenang()
+
+            print()
