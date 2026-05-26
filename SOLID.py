@@ -58,5 +58,3 @@ class KebunBinatang:
 
             if isinstance(hewan, HewanBerenang):
                 hewan.berenang()
-
-            print()
