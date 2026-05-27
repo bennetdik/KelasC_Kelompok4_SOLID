@@ -58,3 +58,39 @@ class KebunBinatang:
 
             if isinstance(hewan, HewanBerenang):
                 hewan.berenang()
+
+class Burung(Hewan, HewanTerbang):
+    def makan(self):
+        print(f"{self.nama} sedang makan")
+    def terbang(self):
+        print(f"{self.nama} sedang terbang")
+
+class Kucing(Hewan, HewanBerjalan):
+    def makan(self):
+        print(f"{self.nama} sedang makan")
+    def berjalan(self):
+        print(f"{self.nama} sedang berjalan")
+
+class Ikan(Hewan, HewanBerenang):
+    def makan(self):
+        print(f"{self.nama} sedang makan")
+    def berenang(self):
+        print(f"{self.nama} sedang berenang")
+
+if __name__ == "__main__":
+    k = kandang()
+
+    burung = Burung("Rio")
+    kucing = Kucing("Garfield")
+    ikan = Ikan("Nemo")
+
+    k.tambah_hewan(burung)
+    k.tambah_hewan(kucing)
+    k.tambah_hewan(ikan)
+
+    print("=== DAFTAR HEWAN ===")
+    k.tampilkan_hewan()
+
+    print("=== MERAWAT HEWAN ===")
+    zoo = KebunBinatang(k)
+    zoo.rawat_semua_hewan()
