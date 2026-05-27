@@ -33,8 +33,7 @@ class kandang:
         for hewan in self.hewan_list:
             hewan.nama_hewan()
 
-class rawat_kandang:
-    
+class RawatKandang:
     def bersihkan_kandang(self):
         print("Kandang dibersihkan.")
 
