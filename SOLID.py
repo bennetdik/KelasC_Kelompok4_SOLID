@@ -22,6 +22,18 @@ class HewanBerenang(ABC):
     def berenang(self):
         pass
 
+class HewanDarat(Hewan, HewanBerjalan):
+    def berjalan(self):
+        print(f"{self.nama} berjalan.")
+
+class HewanUdara(Hewan, HewanTerbang):
+    def terbang(self):
+        print(f"{self.nama} terbang.")
+
+class HewanAir(Hewan, HewanBerenang):
+    def berenang(self):
+        print(f"{self.nama} berenang.")
+
 class kandang:
     def __init__(self):
         self.hewan_list = []
