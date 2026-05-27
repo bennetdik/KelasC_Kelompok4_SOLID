@@ -21,7 +21,6 @@ class HewanBerenang(ABC):
     def berenang(self):
         pass
 
-
 class HewanDarat(Hewan, HewanBerjalan):
     def berjalan(self):
         print(f"{self.nama} berjalan.")
