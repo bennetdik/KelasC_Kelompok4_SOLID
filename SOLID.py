@@ -123,4 +123,4 @@ if __name__ == "__main__":
             break
 
         else:
-            print("Pilihan tidak valid, cooba lagi")
+            print("Pilihan tidak valid, coba lagi")
