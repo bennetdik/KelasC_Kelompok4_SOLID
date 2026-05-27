@@ -79,18 +79,48 @@ class Ikan(Hewan, HewanBerenang):
 
 if __name__ == "__main__":
     k = kandang()
-
-    burung = Burung("Rio")
-    kucing = Kucing("Garfield")
-    ikan = Ikan("Nemo")
-
-    k.tambah_hewan(burung)
-    k.tambah_hewan(kucing)
-    k.tambah_hewan(ikan)
-
-    print("=== DAFTAR HEWAN ===")
-    k.tampilkan_hewan()
-
-    print("=== MERAWAT HEWAN ===")
     zoo = KebunBinatang(k)
-    zoo.rawat_semua_hewan()
+
+    while True:
+        print("=== MENU ===")
+        print("1. Tambah Burung")
+        print("2. Tambah Kucing")
+        print("3. Tambah Ikan")
+        print("4. Tampilkan Daftar Hewan")
+        print("5. Rawat Semua Hewan")
+        print("6. Keluar")
+
+        pilihan = input("Pilih menu: ")
+
+        if pilihan == "1":
+            nama = input("Masukkan nama burung: ")
+            burung = Burung(nama)
+            k.tambah_hewan(burung)
+            print(f"{nama} berhasil ditambahkan!")
+
+        elif pilihan == "2":
+            nama = input("Masukkan nama kucing: ")
+            kucing = Kucing(nama)
+            k.tambah_hewan(kucing)
+            print(f"{nama} berhasil ditambahkan!")
+
+        elif pilihan == "3":
+            nama = input("Masukkan nama ikan: ")
+            ikan = Ikan(nama)
+            k.tambah_hewan(ikan)
+            print(f"{nama} berhasil ditambahkan!")
+
+        elif pilihan == "4":
+            print("=== DAFTAR HEWAN ===")
+            k.tampilkan_hewan()
+
+        elif pilihan == "5":
+            print("=== MERAWAT HEWAN ===")
+            zoo.rawat_semua_hewan()
+
+        elif pilihan == "6":
+            print("Keluar dari program.")
+            break
+
+        else:
+            print("Pilihan tidak valid, cooba lagi")
